@@ -16,25 +16,25 @@ I'm releasing it here to reference my own configuration, and to share my EFI wit
 ## Hardware
 Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) if you're planning on buying components for a new build.
 
-| Item        | Brand          | Model                                                           | Driver                                                                                                                                                 | Comment                             |
-|-------------|----------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| Motherboard | Gigabyte       | Z370n Wifi                                                      | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                     |
-| CPU         | Intel          | Core i7 8700K 3,7GHz                                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | *Coffee Lake*                       |
-| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                   | built-in                                                                                                                                               |                                     |
-| iGPU        | Intel          | UHD Graphics 630                                                | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | *Headless mode*                     |
-| dGPU        | Gigabyte       | RX 580 GAMING 8GB                                               | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                     |
-| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x2</sup> <br>840 EVO 250GB <sup>x1</sup> | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | *macOS <br>Windows*                 |
-| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                    | built-in                                                                                                                                               |                                     |
-| Bluetooth   | Intel          | AC 8265NGW                                                      | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                     |
-| Wifi        | Intel          | AC 8265NGW                                                      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | *BlueToolFixup for Monterey \**     |
-| Ethernet    | Intel          | I219-V <sup>bottom port</sup> <br>I211-AT <sup>top port</sup>   | [IntelMausi](https://github.com/acidanthera/IntelMausi) <br>[SmallTree I211-AT](https://github.com/khronokernel/SmallTree-I211-AT-patch)               |                                     |
-| Audio       | Realtek        | ALC1220                                                         | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | *Layout-ID 5*                       |
-| PSU         | Corsair        | RM750X V2 750W                                                  |                                                                                                                                                        |                                     |
-| Case        | Fractal Design | Define Nano S                                                   |                                                                                                                                                        |                                     |
-| CPU cooler  | Cryorig        | H7                                                              |                                                                                                                                                        |                                     |
-| Display     | Dell           | UltraSharp U2720Q 27"                                           |                                                                                                                                                        |                                     |
+| Item        | Brand          | Model                                                           | Driver                                                                                                                                                 | Comment                        |
+|-------------|----------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| Motherboard | Gigabyte       | Z370n Wifi                                                      | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                |
+| CPU         | Intel          | Core i7 8700K 3,7GHz                                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                  |
+| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                   | built-in                                                                                                                                               |                                |
+| iGPU        | Intel          | UHD Graphics 630                                                | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                |
+| dGPU        | Gigabyte       | RX 580 GAMING 8GB                                               | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                |
+| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x2</sup> <br>840 EVO 250GB <sup>x1</sup> | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_            |
+| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                    | built-in                                                                                                                                               |                                |
+| Bluetooth   | Intel          | AC 8265NGW                                                      | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                |
+| Wifi        | Intel          | AC 8265NGW                                                      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | _BlueToolFixup for Monterey *_ |
+| Ethernet    | Intel          | I219-V <sup>bottom port</sup> <br>I211-AT <sup>top port</sup>   | [IntelMausi](https://github.com/acidanthera/IntelMausi) <br>[SmallTree I211-AT](https://github.com/khronokernel/SmallTree-I211-AT-patch)               |                                |
+| Audio       | Realtek        | ALC1220                                                         | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                  |
+| PSU         | Corsair        | RM750X V2 750W                                                  |                                                                                                                                                        |                                |
+| Case        | Fractal Design | Define Nano S                                                   |                                                                                                                                                        |                                |
+| CPU cooler  | Cryorig        | H7                                                              |                                                                                                                                                        |                                |
+| Display     | Dell           | UltraSharp U2720Q 27"                                           |                                                                                                                                                        |                                |
 
-<sup>*\* BlueToolFixup is needed for macOS 12 Monterey at the moment. Even for Intel Bluetooth. The fix works on this build.*</sup><br>
+<sup>_* BlueToolFixup is needed for macOS 12 Monterey at the moment. Even for Intel Bluetooth. The fix works on this build._</sup><br>
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
@@ -43,68 +43,68 @@ Begin by loading optimized default options, then make sure settings are as below
 
 | Menu                             | Name                            | Option       | Comment                          |
 |----------------------------------|---------------------------------|--------------|----------------------------------|
-| **Save & Exit**                  | Load Optimized Defaults         | Yes          | *Begin with default settings*    |
-| **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | *Personal preference*            |
-| **BIOS**                         | Boot Option #1                  | UEFI OS      | *Disable all other boot options* |
-|                                  | Fast Boot                       | Disabled     | ***Recommended \****             |
-|                                  | Windows 8/10 Features           | Windows 8/10 | ***Recommended \****             |
-|                                  | CSM Support                     | Disabled     | ***Recommended \****             |
-| `Secure Boot`                    | Secure Boot                     | Disabled     | ***Recommended \****             |
-| **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | *This build has a dGPU*          |
-|                                  | Above 4G Decoding               | Enabled      | ***Recommended \****             |
+| **Save & Exit**                  | Load Optimized Defaults         | Yes          | _Begin with default settings_    |
+| **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | _Personal preference_            |
+| **BIOS**                         | Boot Option #1                  | UEFI OS      | _Disable all other boot options_ |
+|                                  | Fast Boot                       | Disabled     | _**Recommended \***_             |
+|                                  | Windows 8/10 Features           | Windows 8/10 | _**Recommended \***_             |
+|                                  | CSM Support                     | Disabled     | _**Recommended \***_             |
+| `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_             |
+| **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_          |
+|                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_             |
 |                                  | Re-Size BAR Support             | Disabled     |                                  |
-|                                  | RGB Fusion                      | Off          | *Personal preference*            |
-|                                  | Intel Platform Trust Technology | Disabled     | ***Recommended \****             |
-|                                  | SW Guard Extens. (SGX)          | Disabled     | ***Recommended \****             |
-| `Trusted Computing`              | Security Device Support         | Disabled     | ***Recommended \****             |
+|                                  | RGB Fusion                      | Off          | _Personal preference_            |
+|                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_             |
+|                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_             |
+| `Trusted Computing`              | Security Device Support         | Disabled     | _**Recommended \***_             |
 | `USB Configuration`              | Legacy USB Support              | Enabled      |                                  |
-| `USB Configuration`              | XHCI Hand-off                   | Enabled      | ***Recommended \****             |
+| `USB Configuration`              | XHCI Hand-off                   | Enabled      | _**Recommended \***_             |
 | `USB Configuration`              | USB Mass Storage Driver Support | Enabled      |                                  |
 | `USB Configuration`              | Port 60/64 Emulation            | Disabled     |                                  |
 | `Network Stack Configuration`    | Network Stack                   | Disabled     |                                  |
-| `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | ***Recommended \****             |
-| **Chipset**                      | VT-d                            | Disabled     | ***Recommended \****             |
-|                                  | Internal Graphics               | Enabled      | *For computing tasks only*       |
+| `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | _**Recommended \***_             |
+| **Chipset**                      | VT-d                            | Disabled     | _**Recommended \***_             |
+|                                  | Internal Graphics               | Enabled      | _For computing tasks only_       |
 |                                  | IOAPIC 24-119 Entries           | Enabled      |                                  |
-|                                  | DVMT Pre-Allocated              | 64M          | ***Recommended \****             |
+|                                  | DVMT Pre-Allocated              | 64M          | _**Recommended \***_             |
 |                                  | DVMT Total Gfx Mem              | 256M         |                                  |
-| **Save & Exit**                  | Save & Exit Setup               | Yes          | *Save BIOS and reset*            |
+| **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_            |
 
-<sup>*\* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings).*</sup>
+<sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup>
 
 ## USB ports
 For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that you can have a total of 15 ports per USB controller, this board has only one controller. USB 3.1 counts as two ports for backward compatibility. USB-C port on this motherboard is a non-switch variant, it counts as three ports. See image and table below which ports are available and which I chose to map in USBPorts.kext. Use [USBMap](https://github.com/corpnewt/USBMap) or [Hackintool](https://github.com/headkaze/Hackintool) if you wish to create your own USB map.
 
 ![USB port map](opencore_gigabyte_z370n_wifi_usb_ports.jpg)
 
-| Port | Type                      | Name                                    | Enabled                                                                                                                                                                                                                                     | Comment               |
-|:----:|---------------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
-| A    | USB 3.1 <sup>Type-A</sup> | HS07 + SS07                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                       |
-| B    | USB 3.1 <sup>Type-A</sup> | HS08 + SS08                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                       |
-| C    | USB 3.1 <sup>Type-A</sup> | HS05 + SS05                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                       |
-| D    | USB 3.1 <sup>Type-A</sup> | HS06 + SS06                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                | *Only 2.0 enabled \** |
-| E    | USB 3.1 <sup>Type-C</sup> | HS09 + SS09 &nbsp; / &nbsp; SS10        | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) &nbsp; / &nbsp; ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                         | *Without switch*      |
-| F    | USB 3.1 <sup>Type-A</sup> | HS03 + SS03                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 |                       |
-| G    | USB 3.1 <sup>Type-A</sup> | HS04 + SS04                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 |                       |
-| H    | Bluetooth                 | HS10                                    | ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                                                                                       |                       |
-| I    | USB 3.1 Header            | HS01 + SS01 &nbsp; / &nbsp; HS02 + SS02 | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) &nbsp; / &nbsp; ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) | *Front panel*         |
-| J    | USB 2.0 Header            | HSxx + HSxx                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 | *PCI bracket \*\**    |
+| Port | Type                      | Name                                    | Enabled                                                                                                                                                                                                                                     | Comment              |
+|:----:|---------------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+| A    | USB 3.1 <sup>Type-A</sup> | HS07 + SS07                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                      |
+| B    | USB 3.1 <sup>Type-A</sup> | HS08 + SS08                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                      |
+| C    | USB 3.1 <sup>Type-A</sup> | HS05 + SS05                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                      |
+| D    | USB 3.1 <sup>Type-A</sup> | HS06 + SS06                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                | _Only 2.0 enabled *_ |
+| E    | USB 3.1 <sup>Type-C</sup> | HS09 + SS09 &nbsp; / &nbsp; SS10        | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) &nbsp; / &nbsp; ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                         | _Without switch_     |
+| F    | USB 3.1 <sup>Type-A</sup> | HS03 + SS03                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 |                      |
+| G    | USB 3.1 <sup>Type-A</sup> | HS04 + SS04                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 |                      |
+| H    | Bluetooth                 | HS10                                    | ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                                                                                       |                      |
+| I    | USB 3.1 Header            | HS01 + SS01 &nbsp; / &nbsp; HS02 + SS02 | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) &nbsp; / &nbsp; ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) | _Front panel_        |
+| J    | USB 2.0 Header            | HSxx + HSxx                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 | _PCI bracket **_     |
 
-<sup>*\* To max out all 15 ports I only enabled USB 2.0 on port D. I use it for a keyboard/mouse wireless dongle, which only uses USB 2.0.*</sup><br>
-<sup>*\*\* I have no PCI bracket for the USB 2.0 Header, so I could not recognize the names for those ports.*</sup>
+<sup>_* To max out all 15 ports I only enabled USB 2.0 on port D. I use it for a keyboard/mouse wireless dongle, which only uses USB 2.0._</sup><br>
+<sup>_** I have no PCI bracket for the USB 2.0 Header, so I could not recognize the names for those ports._</sup>
 
 ## Audio layout
-For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3 works as well, with exactly the same functionality*. All other compatible layouts for this audio chipset were tested and did not work fully.
+For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3 works as well, with the same exact functionality*. All other compatible layouts for this audio chipset were tested and did not work fully.
 
 ![Blue audio jack](https://via.placeholder.com/11/0000fd/?text=+) Blue audio jack acts as `Line In`<br>
 ![Green audio jack](https://via.placeholder.com/11/00ad00/?text=+) Green audio jack acts as `Internal Speakers`<br>
 ![Red audio jack](https://via.placeholder.com/11/e70000/?text=+) Red audio jack acts as `Internal Microphone`
 
-![Front panel left audio jack](https://via.placeholder.com/11/808080/?text=+) Front panel left audio jack acts as `Headphones` <sup>*(switches from Internal Speakers if plugged in)*</sup><br>
-![Front panel right audio jack](https://via.placeholder.com/11/808080/?text=+) Front panel right audio jack acts as `Line In` <sup>*(switches from Internal Microphone if plugged in)*</sup>
+![Front panel left audio jack](https://via.placeholder.com/11/808080/?text=+) Front panel left audio jack acts as `Headphones` <sup>_(switches from Internal Speakers if plugged in)_</sup><br>
+![Front panel right audio jack](https://via.placeholder.com/11/808080/?text=+) Front panel right audio jack acts as `Line In` <sup>_(switches from Internal Microphone if plugged in)_</sup>
 
 ![Audio layout](opencore_gigabyte_z370n_wifi_audio_ports.jpg)
-<sup>*\* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it.*</sup>
+<sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
 Everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Both Ethernet ports, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
@@ -112,15 +112,15 @@ Everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGP
 ## Known issues
 - [ ] Line-out audio gets distorted when turning volume to max.
 
-<sup>*Audio from ![green audio jack](https://via.placeholder.com/8/00ad00/?text=+)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?*</sup>
+<sup>_Audio from ![green audio jack](https://via.placeholder.com/8/00ad00/?text=+)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?_</sup>
 
 - [ ] Front panel headphone audio jack sometimes disconnects.
 
-<sup>*Headphone audio jack on my Fractal Design Define Nano S case sporadically disconnects. It seldom happens and without reason, so hard to reproduce. Perhaps faulty or non-compatible case panel?*</sup>
+<sup>_Headphone audio jack on my Fractal Design Define Nano S case sporadically disconnects. It seldom happens and without reason, so hard to reproduce. Perhaps faulty or non-compatible case panel?_</sup>
 
 - [ ] Using wifi and bluetooth simultaneously can be buggy with current drivers.
 
-<sup>*Especially if you turn on/off bluetooth or wifi, so I just leave them on. Perhaps future drivers will solve issue?*</sup>
+<sup>_Especially if you turn on/off bluetooth or wifi, so I just leave them on. Perhaps future drivers will solve issue?_</sup>
 
 ## Extras
 
@@ -147,7 +147,7 @@ Everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGP
 
   Restart computer and make sure you boot from the same volume you made the changes in. Verbose mode is now active and log files will be saved to the same volume. When you're done and everything works, swap back files from the RELEASE version and revert the values in config.plist.
 
-  <sup>***Reference: https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html***</sup>
+  <sup>_**Reference: https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html**_</sup>
   <br>
 </details>
 
