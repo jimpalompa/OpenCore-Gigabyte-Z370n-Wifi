@@ -107,7 +107,9 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
-Everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Both Ethernet ports, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
+Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. ~~Both~~* one Ethernet ports, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
+
+<sup>_* I211-AT ethernet port stopped working after Monterey update. It shows up in Network settings, but can't connect to anything._</sup>
 
 ## Known issues
 - [ ] Line-out audio gets distorted when turning volume to max.
@@ -121,6 +123,10 @@ Everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGP
 - [ ] Using wifi and bluetooth simultaneously can be buggy with current drivers.
 
 <sup>_Especially if you turn on/off bluetooth or wifi, so I just leave them on. Perhaps future drivers will solve issue?_</sup>
+
+- [ ] Top ethernet port stopped working after Monterey update.
+
+<sup>_I211-AT ethernet port stopped working after Monterey update. It shows up in Network settings, but can't connect to anything. Perhaps future drivers will solve issue?_</sup>
 
 ## Extras
 
