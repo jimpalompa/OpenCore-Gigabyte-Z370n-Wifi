@@ -31,7 +31,7 @@ Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/A
 | PSU         | Corsair        | RM750X V2 750W                                                  |                                                                                                                                                        |                                |
 | Case        | Fractal Design | Define Nano S                                                   |                                                                                                                                                        |                                |
 | CPU cooler  | Cryorig        | H7                                                              |                                                                                                                                                        |                                |
-| Display     | Dell           | UltraSharp U2720Q 27"                                           |                                                                                                                                                        |                                |
+| Display     | Dell           | U2723QE 27" <br>P2222H 22"                           |                                                                                                                                                        |                                |
 
 <sup>_* BlueToolFixup is needed for macOS 12 Monterey at the moment. Even for Intel Bluetooth. The fix works on this build._</sup><br>
 
@@ -78,16 +78,16 @@ For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that
 
 | Port | Type                      | Name                                    | Enabled                                                                                                                                                                                                                                     | Comment              |
 |:----:|---------------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| A    | USB 3.1 <sup>Type-A</sup> | HS07 + SS07                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                      |
-| B    | USB 3.1 <sup>Type-A</sup> | HS08 + SS08                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                      |
-| C    | USB 3.1 <sup>Type-A</sup> | HS05 + SS05                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                               |                      |
-| D    | USB 3.1 <sup>Type-A</sup> | HS06 + SS06                             | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                | _Only 2.0 enabled *_ |
-| E    | USB 3.1 <sup>Type-C</sup> | HS09 + SS09 &nbsp; / &nbsp; SS10        | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) &nbsp; / &nbsp; ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                         | _Without switch_     |
-| F    | USB 3.1 <sup>Type-A</sup> | HS03 + SS03                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 |                      |
-| G    | USB 3.1 <sup>Type-A</sup> | HS04 + SS04                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 |                      |
-| H    | Bluetooth                 | HS10                                    | ![Yes](https://via.placeholder.com/11/0000fd/?text=+)                                                                                                                                                                                       |                      |
-| I    | USB 3.1 Header            | HS01 + SS01 &nbsp; / &nbsp; HS02 + SS02 | ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) &nbsp; / &nbsp; ![Yes](https://via.placeholder.com/11/0000fd/?text=+) + ![Yes](https://via.placeholder.com/11/0000fd/?text=+) | _Front panel_        |
-| J    | USB 2.0 Header            | HSxx + HSxx                             | ![No](https://via.placeholder.com/11/808080/?text=+) + ![No](https://via.placeholder.com/11/808080/?text=+)                                                                                                                                 | _PCI bracket **_     |
+| A    | USB 3.1 <sup>Type-A</sup> | HS07 + SS07                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                               |                      |
+| B    | USB 3.1 <sup>Type-A</sup> | HS08 + SS08                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                               |                      |
+| C    | USB 3.1 <sup>Type-A</sup> | HS05 + SS05                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                               |                      |
+| D    | USB 3.1 <sup>Type-A</sup> | HS06 + SS06                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![No](https://dummyimage.com/11/808080/808080)                                                                                                                                | _Only 2.0 enabled *_ |
+| E    | USB 3.1 <sup>Type-C</sup> | HS09 + SS09 &nbsp; / &nbsp; SS10        | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd) &nbsp; / &nbsp; ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                         | _Without switch_     |
+| F    | USB 3.1 <sup>Type-A</sup> | HS03 + SS03                             | ![No](https://dummyimage.com/11/808080/808080) + ![No](https://dummyimage.com/11/808080/808080)                                                                                                                                 |                      |
+| G    | USB 3.1 <sup>Type-A</sup> | HS04 + SS04                             | ![No](https://dummyimage.com/11/808080/808080) + ![No](https://dummyimage.com/11/808080/808080)                                                                                                                                 |                      |
+| H    | Bluetooth                 | HS10                                    | ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                                                                                       |                      |
+| I    | USB 3.1 Header            | HS01 + SS01 &nbsp; / &nbsp; HS02 + SS02 | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd) &nbsp; / &nbsp; ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd) | _Front panel_        |
+| J    | USB 2.0 Header            | HSxx + HSxx                             | ![No](https://dummyimage.com/11/808080/808080) + ![No](https://dummyimage.com/11/808080/808080)                                                                                                                                 | _PCI bracket **_     |
 
 <sup>_* To max out all 15 ports I only enabled USB 2.0 on port D. I use it for a keyboard/mouse wireless dongle, which only uses USB 2.0._</sup><br>
 <sup>_** I have no PCI bracket for the USB 2.0 Header, so I could not recognize the names for those ports._</sup>
@@ -95,12 +95,12 @@ For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that
 ## Audio layout
 For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3 works as well, with the same exact functionality*. All other compatible layouts for this audio chipset were tested and did not work fully.
 
-![Blue audio jack](https://via.placeholder.com/11/0000fd/?text=+) Blue audio jack acts as `Line In`<br>
-![Green audio jack](https://via.placeholder.com/11/00ad00/?text=+) Green audio jack acts as `Internal Speakers`<br>
-![Red audio jack](https://via.placeholder.com/11/e70000/?text=+) Red audio jack acts as `Internal Microphone`
+![Blue audio jack](https://dummyimage.com/11/0000fd/0000fd) Blue audio jack acts as `Line In`<br>
+![Green audio jack](https://dummyimage.com/11/00ad00/00ad00) Green audio jack acts as `Internal Speakers`<br>
+![Red audio jack](https://dummyimage.com/11/e70000/e70000) Red audio jack acts as `Internal Microphone`
 
-![Front panel left audio jack](https://via.placeholder.com/11/808080/?text=+) Front panel left audio jack acts as `Headphones` <sup>_(switches from Internal Speakers if plugged in)_</sup><br>
-![Front panel right audio jack](https://via.placeholder.com/11/808080/?text=+) Front panel right audio jack acts as `Line In` <sup>_(switches from Internal Microphone if plugged in)_</sup>
+![Front panel left audio jack](https://dummyimage.com/11/808080/808080) Front panel left audio jack acts as `Headphones` <sup>_(switches from Internal Speakers if plugged in)_</sup><br>
+![Front panel right audio jack](https://dummyimage.com/11/808080/808080) Front panel right audio jack acts as `Line In` <sup>_(switches from Internal Microphone if plugged in)_</sup>
 
 ![Audio layout](opencore_gigabyte_z370n_wifi_audio_ports.jpg)
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
@@ -113,7 +113,7 @@ Almost everything works. Wifi and bluetooth (using the internal Intel card), dGP
 ## Known issues
 - [ ] Line-out audio gets distorted when turning volume to max.
 
-<sup>_Audio from ![green audio jack](https://via.placeholder.com/8/00ad00/?text=+)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?_</sup>
+<sup>_Audio from ![green audio jack](https://dummyimage.com/8/00ad00/00ad00)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?_</sup>
 
 - [ ] Front panel headphone audio jack sometimes disconnects.
 
@@ -179,4 +179,4 @@ Apple for macOS<br>
 [khronokernel](https://github.com/khronokernel) for drivers<br>
 [headkaze](https://github.com/headkaze) for Hackintool<br>
 [xzhih](https://github.com/xzhih) for HiDPI<br>
-And everyone from the OpenCore community ♥️
+And everyone from the OpenCore community 🖤
