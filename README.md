@@ -38,7 +38,7 @@ Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/A
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
 
-**Version F14b**
+**Version F14**
 
 | Menu                             | Name                            | Option       | Comment                          |
 |----------------------------------|---------------------------------|--------------|----------------------------------|
