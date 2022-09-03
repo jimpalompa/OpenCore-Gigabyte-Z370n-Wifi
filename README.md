@@ -64,12 +64,13 @@ Begin by loading optimized default options, then make sure settings are as below
 | `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | _**Recommended \***_             |
 | **Chipset**                      | VT-d                            | Disabled     | _**Recommended \***_             |
 |                                  | Internal Graphics               | Enabled      | _For computing tasks only_       |
+|                                  | DVMT Pre-Allocated **           | 64M          | _**Recommended \***_             |
+|                                  | DVMT Total Gfx Mem **           | 256M         |                                  |
 |                                  | IOAPIC 24-119 Entries           | Enabled      |                                  |
-|                                  | DVMT Pre-Allocated              | 64M          | _**Recommended \***_             |
-|                                  | DVMT Total Gfx Mem              | 256M         |                                  |
 | **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_            |
 
-<sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup>
+<sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup><br>
+<sup>_** You need to set Internal Graphics > Enabled, then Save & Exit Setup before these options are available. Enter BIOS setup again and confirm settings._</sup>
 
 ## USB ports
 For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that you can have a total of 15 ports per USB controller, this board has only one controller. USB 3.1 counts as two ports for backward compatibility. USB-C port on this motherboard is a non-switch variant, it counts as three ports. See image and table below which ports are available and which I chose to map in USBPorts.kext. Use [USBMap](https://github.com/corpnewt/USBMap) or [Hackintool](https://github.com/headkaze/Hackintool) if you wish to create your own USB map.
@@ -111,6 +112,10 @@ Almost everything works. Wifi and bluetooth (using the internal Intel card), dGP
 <sup>_* I211-AT ethernet port stopped working after Monterey update. It shows up in Network settings, but can't connect to anything._</sup>
 
 ## Known issues
+- [ ] System hangs with Windows Memory integrity enabled.
+
+<sup>_Running dual OS system, macOS + Windows, enabling Device security > Memory integrity in Windows, system hangs during startup, at the BIOS logo. You will never get past the logo to the OpenCore boot picker. BE AWARE to not enabling this setting in Windows._</sup>
+
 - [ ] Line-out audio gets distorted when turning volume to max.
 
 <sup>_Audio from ![green audio jack](https://dummyimage.com/8/00ad00/00ad00)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?_</sup>
@@ -135,7 +140,7 @@ Almost everything works. Wifi and bluetooth (using the internal Intel card), dGP
   <br>
 
   My releases are prepared for easy dubugging, all you have to do is download the DEBUG version of [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg). Reminder, it's a good idea booting the debug EFI from a USB stick.
-  
+
   **Swap the following files:**
 
   EFI > BOOT > `BOOTx64.efi`<br>
