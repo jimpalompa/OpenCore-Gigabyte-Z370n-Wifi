@@ -15,25 +15,25 @@ I'm releasing it here to reference my own configuration, and to share my EFI wit
 ## Hardware
 Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) if you're planning on buying components for a new build.
 
-| Item        | Brand          | Model                                                           | Driver                                                                                                                                                 | Comment                         |
-|-------------|----------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| Motherboard | Gigabyte       | Z370n Wifi                                                      | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
-| CPU         | Intel          | Core i7 8700K 3,7GHz                                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
-| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                   | built-in                                                                                                                                               |                                 |
-| iGPU        | Intel          | UHD Graphics 630                                                | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                 |
-| dGPU        | Gigabyte       | RX 580 GAMING 8GB                                               | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                 |
-| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x1</sup> <br>840 EVO 250GB <sup>x1</sup> | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_             |
-| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                    | built-in                                                                                                                                               |                                 |
-| Bluetooth   | Intel          | AC 8265NGW                                                      | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
-| Wifi        | Intel          | AC 8265NGW                                                      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | _BlueToolFixup for macOS 12+ *_ |
-| Ethernet    | Intel          | I219-V <sup>bottom port</sup> <br>I211-AT <sup>top port</sup>   | [IntelMausi](https://github.com/acidanthera/IntelMausi) <br>[AppleIGB](https://github.com/donatengit/AppleIGB)               |                                 |
-| Audio       | Realtek        | ALC1220                                                         | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
-| PSU         | Corsair        | RM750X V2 750W                                                  |                                                                                                                                                        |                                 |
-| Case        | Fractal Design | Define Nano S                                                   |                                                                                                                                                        |                                 |
-| CPU cooler  | Cryorig        | H7                                                              |                                                                                                                                                        |                                 |
-| Display     | Dell           | U2723QE 27" <br>P2222H 22"                                      |                                                                                                                                                        |                                 |
+| Item        | Brand          | Model                                                             | Driver                                                                                                                                                 | Comment                         |
+|-------------|----------------|-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| Motherboard | Gigabyte       | Z370n Wifi                                                        | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
+| CPU         | Intel          | Core i7 8700K 3,7GHz                                              | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
+| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                     | built-in                                                                                                                                               |                                 |
+| iGPU        | Intel          | UHD Graphics 630                                                  | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                 |
+| dGPU        | Gigabyte       | RX 580 GAMING 8GB                                                 | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                 |
+| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x1</sup> <br>840 EVO 250GB <sup>x1</sup>   | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_             |
+| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                      | built-in                                                                                                                                               |                                 |
+| Wifi        | Intel          | AC 8265NGW                                                        | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
+| Bluetooth   | Intel          | AC 8265NGW                                                        | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | _BlueToolFixup for macOS 12+ *_ |
+| Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~ | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V_             |
+| Audio       | Realtek        | ALC1220                                                           | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
+| PSU         | Corsair        | RM750X V2 750W                                                    |                                                                                                                                                        |                                 |
+| Case        | Fractal Design | Define Nano S                                                     |                                                                                                                                                        |                                 |
+| CPU cooler  | Cryorig        | H7                                                                |                                                                                                                                                        |                                 |
+| Display     | Dell           | U2723QE 27" <br>P2222H 22"                                        |                                                                                                                                                        |                                 |
 
-<sup>_* BlueToolFixup is needed for macOS 12 or later at the moment. Even for Intel Bluetooth. The fix works on this build._</sup><br>
+<sup>_* BlueToolFixup is needed for macOS 12 or later at the moment. Even for Intel Bluetooth. ~~The fix works on this build.~~ Bluetooth stopped working on macOS 13 Ventura._</sup><br>
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
@@ -107,14 +107,20 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
-Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Both Ethernet ports, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
-
-<sup>_* I211-AT ethernet port stopped working after Monterey update. It shows up in Network settings, but can't connect to anything._</sup>
+Almost everything works. Wifi and ~~bluetooth~~ (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
-- [ ] Continuity Camera does not work.
+- [ ] Bluetooth stopped working after macOS 13 Ventura update.
+
+<sup>_Have yet to debug why bluetooth does not work. Perhaps future drivers will solve issue?_</sup>
+
+- [ ] Continuity Camera does not work wirelessly, only works with USB connection.
 
 <sup>_Have yet to debug why continuity camera does not work. Perhaps future drivers will solve issue?_</sup>
+
+- [ ] I211-AT top ethernet port is not working after Monterey update. It shows up in Network settings, but can't connect to anything.
+
+<sup>_Don't mind this, since I'm only using one ethernet port. Perhaps future drivers will solve issue?_</sup>
 
 - [ ] System hangs with Windows Memory integrity enabled.
 
