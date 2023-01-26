@@ -33,7 +33,7 @@ Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/A
 | CPU cooler  | Cryorig        | H7                                                                |                                                                                                                                                        |                                 |
 | Display     | Dell           | U2723QE 27" <br>P2222H 22"                                        |                                                                                                                                                        |                                 |
 
-<sup>_* BlueToolFixup is needed for macOS 12 or later at the moment. Even for Intel Bluetooth. ~~The fix works on this build.~~ Bluetooth stopped working on macOS 13 Ventura._</sup><br>
+<sup>_* BlueToolFixup is needed for macOS 12 or later at the moment. Even for Intel Bluetooth. The fix works on this build._</sup><br>
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
