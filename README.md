@@ -107,20 +107,20 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
-Almost everything works. Wifi and ~~bluetooth~~ (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
+Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
-- [ ] Bluetooth stopped working after macOS 13 Ventura update.
-
-<sup>_Have yet to debug why bluetooth does not work. Perhaps future drivers will solve issue?_</sup>
-
 - [ ] Continuity Camera does not work wirelessly, only works with USB connection.
 
 <sup>_Have yet to debug why continuity camera does not work. Perhaps future drivers will solve issue?_</sup>
 
+- [ ] Using wifi and bluetooth simultaneously can be buggy with current drivers.
+
+<sup>_Especially if you turn on/off bluetooth or wifi, so I just leave them on. Perhaps future drivers will solve issue?_</sup>
+
 - [ ] I211-AT top ethernet port is not working after Monterey update. It shows up in Network settings, but can't connect to anything.
 
-<sup>_Don't mind this, since I'm only using one ethernet port. Perhaps future drivers will solve issue?_</sup>
+<sup>_Don't mind this, since I'm only using one ethernet port. There are some pre-releases of kexts to get the second port working, but I chose not to use them due to instability.</sup>
 
 - [ ] System hangs with Windows Memory integrity enabled.
 
@@ -132,11 +132,7 @@ Almost everything works. Wifi and ~~bluetooth~~ (using the internal Intel card),
 
 - [ ] Front panel headphone audio jack sometimes disconnects.
 
-<sup>_Headphone audio jack on my Fractal Design Define Nano S case sporadically disconnects. It seldom happens and without reason, so hard to reproduce. Perhaps faulty or non-compatible case panel?_</sup>
-
-- [ ] Using wifi and bluetooth simultaneously can be buggy with current drivers.
-
-<sup>_Especially if you turn on/off bluetooth or wifi, so I just leave them on. Perhaps future drivers will solve issue?_</sup>
+<sup>_Headphone audio jack on my Fractal Design Define Nano S case sporadically disconnects. It seldom happens and without reason, so hard to reproduce. This has to do with faulty or non-compatible case panel, nothing to do with the internal hardware._</sup>
 
 ## Extras
 
