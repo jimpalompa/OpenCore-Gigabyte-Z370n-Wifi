@@ -120,7 +120,7 @@ Almost everything works. Wifi and bluetooth (using the internal Intel card), dGP
 
 - [ ] I211-AT top ethernet port is not working after Monterey update. It shows up in Network settings, but can't connect to anything.
 
-<sup>_Don't mind this, since I'm only using one ethernet port. There are some pre-releases of kexts to get the second port working, but I chose not to use them due to instability.</sup>
+<sup>_Don't mind this, since I'm only using one ethernet port. There are some pre-releases of kexts to get the second port working, but I chose not to use them due to instability._</sup>
 
 - [ ] System hangs with Windows Memory integrity enabled.
 
