@@ -1,4 +1,7 @@
+**Sorry, I no longer maintain this build, I've moved on with other project. Thank you all for the support** ♥️
+
 # OpenCore Gigabyte Z370n Wifi
+
 An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS versions in my releases. I'm using this build as a workstation. It is my fourth hackintosh build so far.
 
 Though this is a ready to use EFI, it is for my own system, so **use at your own risk**. I truly recommend everyone to read [Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/). It's comprehensive, but take your time and have patience, there are no shortcuts to a perfect build.
