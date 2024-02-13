@@ -1,4 +1,4 @@
-**Sorry, I no longer maintain this build, I've moved on with other project. Thank you all for the support** ♥️
+**Sorry, I no longer maintain this build, I've moved on with other projects. Thank you all for the support** ♥️
 
 # OpenCore Gigabyte Z370n Wifi
 
