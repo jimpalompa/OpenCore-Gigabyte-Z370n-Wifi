@@ -1,5 +1,3 @@
-**Sorry, I no longer maintain this build, I've moved on with other projects. Thank you all for the support** ♥️
-
 # OpenCore Gigabyte Z370n Wifi
 
 An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS versions in my releases. I'm using this build as a workstation. It is my fourth hackintosh build so far.
@@ -28,15 +26,13 @@ Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/A
 | SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x1</sup> <br>840 EVO 250GB <sup>x1</sup>   | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_             |
 | HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                      | built-in                                                                                                                                               |                                 |
 | Wifi        | Intel          | AC 8265NGW                                                        | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
-| Bluetooth   | Intel          | AC 8265NGW                                                        | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | _BlueToolFixup for macOS 12+ *_ |
+| Bluetooth   | Intel          | AC 8265NGW                                                        | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) |                                 |
 | Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~ | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V_             |
 | Audio       | Realtek        | ALC1220                                                           | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
 | PSU         | Corsair        | RM750X V2 750W                                                    |                                                                                                                                                        |                                 |
 | Case        | Fractal Design | Define Nano S                                                     |                                                                                                                                                        |                                 |
 | CPU cooler  | Cryorig        | H7                                                                |                                                                                                                                                        |                                 |
-| Display     | Dell           | U2723QE 27" <br>P2222H 22"                                        |                                                                                                                                                        |                                 |
-
-<sup>_* BlueToolFixup is needed for macOS 12 or later at the moment. Even for Intel Bluetooth. The fix works on this build._</sup><br>
+| Display     | Dell           | U2723QE 27" <br>P2722DE 22" <br>P2422H 24"                        |                                                                                                                                                        |                                 |
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
@@ -110,12 +106,20 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
-Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, AirDrop, Handoff, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
+Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
+- [ ] AirDrop/Handoff/Continuity does not work after Sonoma update.
+
+<sup>_macOS no longer natively supports any wireless cards at all. Perhaps future drivers will solve issue?_</sup>
+
+- [x] TRIM during boot takes a long while if it's activated.
+
+<sup>_Samsung SSD's are not macOS TRIM-supported. Fixed by setting key SetApfsTrimTimeout to 0. Build now boots instantaneously._</sup>
+
 - [ ] Continuity Camera does not work wirelessly, only works with USB connection.
 
-<sup>_Have yet to debug why continuity camera does not work. Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards at all. Perhaps future drivers will solve issue?_</sup>
 
 - [ ] Using wifi and bluetooth simultaneously can be buggy with current drivers.
 
@@ -123,9 +127,9 @@ Almost everything works. Wifi and bluetooth (using the internal Intel card), dGP
 
 - [ ] I211-AT top ethernet port is not working after Monterey update. It shows up in Network settings, but can't connect to anything.
 
-<sup>_Don't mind this, since I'm only using one ethernet port. There are some pre-releases of kexts to get the second port working, but I chose not to use them due to instability._</sup>
+<sup>_I don't mind this, since I'm only using one ethernet port. There are some pre-releases of kexts to get the second port working, but I chose not to use them due to instability._</sup>
 
-- [ ] System hangs with Windows Memory integrity enabled.
+- [x] System hangs with Windows Memory integrity enabled.
 
 <sup>_Running dual OS system, macOS + Windows, enabling Device security > Memory integrity in Windows, system hangs during startup, at the BIOS logo. You will never get past the logo to the OpenCore boot picker. BE AWARE to not enabling this setting in Windows._</sup>
 
@@ -189,4 +193,4 @@ Apple for macOS<br>
 [khronokernel](https://github.com/khronokernel) for drivers<br>
 [headkaze](https://github.com/headkaze) for Hackintool<br>
 [xzhih](https://github.com/xzhih) for HiDPI<br>
-And everyone from the OpenCore community 🖤
+And everyone from the OpenCore community ♥️
