@@ -109,13 +109,13 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
-- [ ] AirDrop/Handoff/Continuity does not work after Sonoma update.
-
-<sup>_macOS no longer natively supports any wireless cards at all. Perhaps future drivers will solve issue?_</sup>
-
 - [x] TRIM during boot takes a long while if it's activated.
 
 <sup>_Samsung SSD's are not macOS TRIM-supported. Fixed by setting key SetApfsTrimTimeout to 0. Build now boots instantaneously._</sup>
+
+- [ ] AirDrop/Handoff/Continuity does not work after Sonoma update.
+
+<sup>_macOS no longer natively supports any wireless cards at all. Perhaps future drivers will solve issue?_</sup>
 
 - [ ] Continuity Camera does not work wirelessly, only works with USB connection.
 
@@ -136,10 +136,6 @@ Almost everything works. Wifi and bluetooth (using the internal Intel card), dGP
 - [ ] Line-out audio gets distorted when turning volume to max.
 
 <sup>_Audio from ![green audio jack](https://dummyimage.com/8/00ad00/00ad00)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?_</sup>
-
-- [ ] Front panel headphone audio jack sometimes disconnects.
-
-<sup>_Headphone audio jack on my Fractal Design Define Nano S case sporadically disconnects. It seldom happens and without reason, so hard to reproduce. This has to do with faulty or non-compatible case panel, nothing to do with the internal hardware._</sup>
 
 ## Extras
 
