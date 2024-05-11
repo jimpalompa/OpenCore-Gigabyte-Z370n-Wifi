@@ -49,7 +49,7 @@ Begin by loading optimized default options, then make sure settings are as below
 |                                  | CSM Support                     | Disabled     | _**Recommended \***_             |
 | `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_             |
 | **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_          |
-|                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_             |
+|                                  | Above 4G Decoding               | Disabled     | _**Recommended \***_             |
 |                                  | Re-Size BAR Support             | Disabled     |                                  |
 |                                  | RGB Fusion                      | Off          | _Personal preference_            |
 |                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_             |
