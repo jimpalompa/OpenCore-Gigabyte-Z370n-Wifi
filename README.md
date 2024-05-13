@@ -1,4 +1,4 @@
-# OpenCore Gigabyte Z370n Wifi
+# OpenCore Gigabyte Z370n Wifi + Asus RX 6600
 
 An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS versions in my releases. I'm using this build as a workstation. It is my fourth hackintosh build so far.
 
