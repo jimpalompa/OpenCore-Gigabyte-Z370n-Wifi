@@ -1,4 +1,4 @@
-# OpenCore Gigabyte Z370n Wifi + Asus RX 6600
+# OpenCore Gigabyte Z370n Wifi + RX 6600
 
 An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS versions in my releases. I'm using this build as a workstation. It is my fourth hackintosh build so far.
 
@@ -32,7 +32,7 @@ Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/A
 | PSU         | Corsair        | RM750X V2 750W                                                    |                                                                                                                                                        |                                 |
 | Case        | Fractal Design | Define Nano S                                                     |                                                                                                                                                        |                                 |
 | CPU cooler  | Cryorig        | H7                                                                |                                                                                                                                                        |                                 |
-| Display     | Dell           | U2723QE 27" <br>P2722DE 22" <br>P2422H 24"                        |                                                                                                                                                        |                                 |
+| Display     | Dell           | U2723QE 27" <br>P2722DE 27" <br>P2422H 24"                        |                                                                                                                                                        |                                 |
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
