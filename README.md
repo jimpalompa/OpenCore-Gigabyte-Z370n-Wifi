@@ -106,7 +106,7 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
-Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
+Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
 - [ ] Wifi stopped working after Sequoia update.
