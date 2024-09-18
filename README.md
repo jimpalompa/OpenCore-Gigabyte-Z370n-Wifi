@@ -109,11 +109,11 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 Almost everything works. Wifi and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
-- [x] Wifi stopped working after Sequoia update.
+- [ ] Wifi stopped working after Sequoia update.
 
 <sup>_Perhaps future drivers will solve issue?_</sup>
 
-- [x] TRIM during boot takes a long while if it's activated.
+- [ ] TRIM during boot takes a long while if it's activated.
 
 <sup>_Samsung SSD's are not macOS TRIM-supported. Fixed by setting key SetApfsTrimTimeout to 0. Build now boots instantaneously._</sup>
 
