@@ -66,6 +66,8 @@ Begin by loading optimized default options, then make sure settings are as below
 |                                  | DVMT Pre-Allocated **           | 64M          | _**Recommended \***_             |
 |                                  | DVMT Total Gfx Mem **           | 256M         |                                  |
 |                                  | IOAPIC 24-119 Entries           | Enabled      |                                  |
+| **Power**                        | ErP                             | Enabled      | _Personal preference_            |
+|                                  | RC6(Render Standby)             | Disabled     | _Personal preference_            |
 | **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_            |
 
 <sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup><br>
