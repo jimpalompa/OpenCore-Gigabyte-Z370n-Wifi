@@ -186,5 +186,4 @@ Apple for macOS<br>
 [OpenIntelWireless](https://github.com/OpenIntelWireless) for drivers<br>
 [khronokernel](https://github.com/khronokernel) for drivers<br>
 [headkaze](https://github.com/headkaze) for Hackintool<br>
-[xzhih](https://github.com/xzhih) for HiDPI<br>
-And everyone from the OpenCore community ♥️
+And everyone from the OpenCore community 🖤
