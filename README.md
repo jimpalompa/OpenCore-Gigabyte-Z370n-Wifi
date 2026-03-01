@@ -20,17 +20,17 @@ Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/A
 |-------------|----------------|-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
 | Motherboard | Gigabyte       | Z370n Wifi                                                        | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
 | CPU         | Intel          | Core i7 8700K 3,7GHz                                              | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
-| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                     | built-in                                                                                                                                               |                                 |
+| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                     | native                                                                                                                                               |                                 |
 | iGPU        | Intel          | UHD Graphics 630                                                  | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                 |
 | dGPU        | Asus           | RX 6600 DUAL V2 8GB                                               | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                 |
-| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x1</sup> <br>840 EVO 250GB <sup>x1</sup>   | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_             |
-| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                      | built-in                                                                                                                                               |                                 |
+| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x2</sup> <br>840 EVO 250GB <sup>x1</sup>   | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_             |
+| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                      | native                                                                                                                                               |                                 |
 | Wifi        | Intel          | AC 8265NGW <sup>802.11ac</sup>                                    | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
-| Bluetooth   | Intel          | AC 8265NGW <sup>v4.2</sup>                               | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) |                                 |
+| Bluetooth   | Intel          | AC 8265NGW <sup>v4.2</sup>                                        | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) |                                 |
 | Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~ | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V_             |
 | Audio       | Realtek        | ALC1220                                                           | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
 | PSU         | Corsair        | RM750X V2 750W                                                    |                                                                                                                                                        |                                 |
-| Case        | Fractal Design | Define Nano S                                                     |                                                                                                                                                        |                                 |
+| Case        | Fractal Design | Pop Mini Silent                                                   |                                                                                                                                                        |                                 |
 | CPU cooler  | Cryorig        | H7                                                                |                                                                                                                                                        |                                 |
 | Display     | Dell           | U2723QE 27" <br>P2722DE 27" <br>P2422H 24"                        |                                                                                                                                                        |                                 |
 
@@ -111,13 +111,13 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
 
 ## Known issues
-- [ ] Wifi stopped working after Sequoia update.
-
-<sup>_Perhaps future drivers will solve issue?_</sup>
-
 - [ ] TRIM during boot takes a long while if it's activated.
 
 <sup>_Samsung SSD's are not macOS TRIM-supported. Fixed by setting key SetApfsTrimTimeout to 0. Build now boots instantaneously._</sup>
+
+- [ ] Wifi stopped working after Sequoia update.
+
+<sup>_Perhaps future drivers will solve issue?_</sup>
 
 - [ ] AirDrop/Handoff/Continuity does not work after Sonoma update.
 
@@ -134,10 +134,6 @@ Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card),
 - [x] System hangs with Windows Memory integrity enabled.
 
 <sup>_Running dual OS system, macOS + Windows, enabling Device security > Memory integrity in Windows, system hangs during startup, at the BIOS logo. You will never get past the logo to the OpenCore boot picker. BE AWARE to not enabling this setting in Windows._</sup>
-
-- [ ] Line-out audio gets distorted when turning volume to max.
-
-<sup>_Audio from ![green audio jack](https://dummyimage.com/8/00ad00/00ad00)`Internal Speakers` gets distorted when volume is set to max 100% in macOS. I've read somewhere it has to do with the motherboard integrated "smart audio amp". Perhaps a deep dive in the [fixing audio](https://dortania.github.io/OpenCore-Post-Install/universal/audio.html) guide will solve issue?_</sup>
 
 ## Extras
 
