@@ -1,74 +1,76 @@
 # OpenCore Gigabyte Z370n Wifi + RX 6600
 
-An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS versions in my releases. I'm using this build as a workstation. It is my fourth hackintosh build so far.
+An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS version in release. This is my fourth OpenCore build so far. Used as my primary workstation.
 
-Though this is a ready to use EFI, it is for my own system, so **use at your own risk**. I truly recommend everyone to read [Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/). It's comprehensive, but take your time and have patience, there are no shortcuts to a perfect build.
+Though this is a "ready to use" EFI, it is for my own system, so **use at your own risk**. I recommend everyone to read [Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/). It's comprehensive, but take your time and have patience, there are no shortcuts to a perfect build.
 
-I'm releasing it here to reference my own configuration, and to share my EFI with others, for a little help on the way. I will not publish releases every time I update OpenCore and drivers, but I will try to publish if I have enough spare time. **Do not forget** to [generate SMBIOS info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) if you are planning on using this EFI in your build, since my releases does not include this information, for obvious reasons.
+I'm publishing releases here to reference my own configurations and to share my EFI with others, for a little help on the way. With that said, I will probably not publish a release every time I update my OpenCore build. **Do not forget** to [generate SMBIOS info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) if you are planning on using this EFI in your build, since my releases does not include this information, for obvious reasons.
 
 ![About this Mac](opencore_gigabyte_z370n_wifi_about_this_mac.jpg)
 
 ## Overview
 * This build runs on a dedicated GPU, alongside the integrated GPU, which is only used for computing tasks and does not drive a display. If you are not using a dGPU you need to follow the [GPU patching](https://dortania.github.io/OpenCore-Post-Install/gpu-patching/) guide.
-* No beauty treatments were done in this build, that means no OpenCore GUI and no boot-chime. I want to keep everything simple and minimal. You can enable all of this by following the [beauty treatment](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html) guide.
+* No beauty treatments were done in this build, that means no OpenCore GUI and no boot-chime. I want to keep everything minimal. You can enable all of this by following the [beauty treatment](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html) guide.
 * Wireless card for bluetooth and wifi is not replaced. I'm using the default motherboard Intel card. If you wish to swap the wireless card, remember to read [wireless buyers guide](https://dortania.github.io/Wireless-Buyers-Guide/) first.
 
 ## Hardware
 Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) if you're planning on buying components for a new build.
 
-| Item        | Brand          | Model                                                             | Driver                                                                                                                                                 | Comment                         |
-|-------------|----------------|-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| Motherboard | Gigabyte       | Z370n Wifi                                                        | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
-| CPU         | Intel          | Core i7 8700K 3,7GHz                                              | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
-| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                     | native                                                                                                                                               |                                 |
-| iGPU        | Intel          | UHD Graphics 630                                                  | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                 |
-| dGPU        | Asus           | RX 6600 DUAL V2 8GB                                               | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                 |
-| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x2</sup> <br>840 EVO 250GB <sup>x1</sup>   | [NVMeFix](https://github.com/acidanthera/NVMeFix)                                                                                                      | _macOS <br>Windows_             |
-| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup>                                      | native                                                                                                                                               |                                 |
-| Wifi        | Intel          | AC 8265NGW <sup>802.11ac</sup>                                    | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
-| Bluetooth   | Intel          | AC 8265NGW <sup>v4.2</sup>                                        | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) |                                 |
-| Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~ | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V_             |
-| Audio       | Realtek        | ALC1220                                                           | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
-| PSU         | Corsair        | RM750X V2 750W                                                    |                                                                                                                                                        |                                 |
-| Case        | Fractal Design | Pop Mini Silent                                                   |                                                                                                                                                        |                                 |
-| CPU cooler  | Cryorig        | H7                                                                |                                                                                                                                                        |                                 |
-| Display     | Dell           | U2723QE 27" <br>P2722DE 27" <br>P2422H 24"                        |                                                                                                                                                        |                                 |
+| Item        | Brand          | Model                                                                                           | Driver                                                                                                                                                 | Comment                         |
+|-------------|----------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| Motherboard | Gigabyte       | Z370n Wifi                                                                                      | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
+| CPU         | Intel          | Core i7 8700K 3,7GHz                                                                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
+| RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                                                   | native                                                                                                                                                 |                                 |
+| iGPU        | Intel          | UHD Graphics 630                                                                                | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                 |
+| dGPU        | Asus           | RX 6600 DUAL V2 8GB                                                                             | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                 |
+| SSD         | Samsung        | 970 EVO 500GB M.2 <sup>x2</sup> <br>850 EVO 250GB <sup>x1</sup> <br>840 EVO 250GB <sup>x1</sup> | [NVMeFix](https://github.com/acidanthera/NVMeFix) <br> <br> <br>                                                                                       | _macOS <br>Windows <br>Linux *_ |
+| HDD         | WD             | Green 3TB 3.5" <sup>x1</sup> <br>Green 2TB 3.5" <sup>x1</sup>                                   | native                                                                                                                                                 |                                 |
+| Wifi        | Intel          | AC 8265NGW <sup>802.11ac</sup>                                                                  | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
+| Bluetooth   | Intel          | AC 8265NGW <sup>v4.2</sup>                                                                      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) |                                 |
+| Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~                               | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V_             |
+| Audio       | Realtek        | ALC1220                                                                                         | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
+| PSU         | Corsair        | RM750X V2 750W                                                                                  |                                                                                                                                                        |                                 |
+| Case        | Fractal Design | Pop Mini Silent                                                                                 |                                                                                                                                                        |                                 |
+| CPU cooler  | Cryorig        | H7                                                                                              |                                                                                                                                                        |                                 |
+| Display     | Dell           | U2723QE 27" <br>P2722DE 27" <br>P2422H 24"                                                      |                                                                                                                                                        |                                 |
+
+<sup>_* Extra drivers needed when dualbooting with Linux, [Dualbooting with Linux](https://dortania.github.io/OpenCore-Multiboot/oc/linux.html#method-a-openlinuxboot) using method A._</sup>
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
 
 **Version F14**
 
-| Menu                             | Name                            | Option       | Comment                          |
-|----------------------------------|---------------------------------|--------------|----------------------------------|
-| **Save & Exit**                  | Load Optimized Defaults         | Yes          | _Begin with default settings_    |
-| **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | _Personal preference_            |
-| **BIOS**                         | Boot Option #1                  | UEFI OS      | _Disable all other boot options_ |
-|                                  | Fast Boot                       | Disabled     | _**Recommended \***_             |
-|                                  | Windows 8/10 Features           | Windows 8/10 | _**Recommended \***_             |
-|                                  | CSM Support                     | Disabled     | _**Recommended \***_             |
-| `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_             |
-| **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_          |
-|                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_             |
-|                                  | Re-Size BAR Support             | Disabled     |                                  |
-|                                  | RGB Fusion                      | Off          | _Personal preference_            |
-|                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_             |
-|                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_             |
-| `Trusted Computing`              | Security Device Support         | Disabled     | _**Recommended \***_             |
-| `USB Configuration`              | Legacy USB Support              | Enabled      |                                  |
-| `USB Configuration`              | XHCI Hand-off                   | Enabled      | _**Recommended \***_             |
-| `USB Configuration`              | USB Mass Storage Driver Support | Enabled      |                                  |
-| `USB Configuration`              | Port 60/64 Emulation            | Disabled     |                                  |
-| `Network Stack Configuration`    | Network Stack                   | Disabled     |                                  |
-| `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | _**Recommended \***_             |
-| **Chipset**                      | VT-d                            | Disabled     | _**Recommended \***_             |
-|                                  | Internal Graphics               | Enabled      | _For computing tasks only_       |
-|                                  | DVMT Pre-Allocated **           | 64M          | _**Recommended \***_             |
-|                                  | DVMT Total Gfx Mem **           | 256M         |                                  |
-|                                  | IOAPIC 24-119 Entries           | Enabled      |                                  |
-| **Power**                        | ErP                             | Enabled      | _Personal preference_            |
-|                                  | RC6(Render Standby)             | Disabled     | _Personal preference_            |
-| **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_            |
+| Menu                             | Name                            | Option       | Comment                                    |
+|----------------------------------|---------------------------------|--------------|--------------------------------------------|
+| **Save & Exit**                  | Load Optimized Defaults         | Yes          | _Begin with default settings_              |
+| **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | _Personal preference_                      |
+| **BIOS**                         | Boot Option #1                  | OpenCore     | _Disable all other boot options if needed_ |
+|                                  | Fast Boot                       | Disabled     | _**Recommended \***_                       |
+|                                  | Windows 8/10 Features           | Windows 8/10 | _**Recommended \***_                       |
+|                                  | CSM Support                     | Disabled     | _**Recommended \***_                       |
+| `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_                       |
+| **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_                    |
+|                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_                       |
+|                                  | Re-Size BAR Support             | Disabled     |                                            |
+|                                  | RGB Fusion                      | Off          | _Personal preference_                      |
+|                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_                       |
+|                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_                       |
+| `Trusted Computing`              | Security Device Support         | Disabled     | _**Recommended \***_                       |
+| `USB Configuration`              | Legacy USB Support              | Enabled      |                                            |
+| `USB Configuration`              | XHCI Hand-off                   | Enabled      | _**Recommended \***_                       |
+| `USB Configuration`              | USB Mass Storage Driver Support | Enabled      |                                            |
+| `USB Configuration`              | Port 60/64 Emulation            | Disabled     |                                            |
+| `Network Stack Configuration`    | Network Stack                   | Disabled     |                                            |
+| `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | _**Recommended \***_                       |
+| **Chipset**                      | VT-d                            | Disabled     | _**Recommended \***_                       |
+|                                  | Internal Graphics               | Enabled      | _For computing tasks only_                 |
+|                                  | DVMT Pre-Allocated **           | 64M          | _**Recommended \***_                       |
+|                                  | DVMT Total Gfx Mem **           | 256M         |                                            |
+|                                  | IOAPIC 24-119 Entries           | Enabled      |                                            |
+| **Power**                        | ErP                             | Enabled      | _Personal preference_                      |
+|                                  | RC6(Render Standby)             | Disabled     | _Personal preference_                      |
+| **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_                      |
 
 <sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup><br>
 <sup>_** You need to set Internal Graphics > Enabled, then Save & Exit Setup before these options are available. Enter BIOS setup again and confirm settings._</sup>
@@ -117,15 +119,15 @@ Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card),
 
 - [ ] Wifi stopped working after Sequoia update.
 
-<sup>_Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve issue?_</sup>
 
 - [ ] AirDrop/Handoff/Continuity does not work after Sonoma update.
 
-<sup>_macOS no longer natively supports any wireless cards at all. Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve issue?_</sup>
 
 - [ ] Continuity Camera does not work wirelessly, only works with USB connection.
 
-<sup>_macOS no longer natively supports any wireless cards at all. Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve issue?_</sup>
 
 - [ ] I211-AT top ethernet port is not working after Monterey update. It shows up in Network settings, but can't connect to anything.
 
@@ -186,4 +188,4 @@ Apple for macOS<br>
 [OpenIntelWireless](https://github.com/OpenIntelWireless) for drivers<br>
 [khronokernel](https://github.com/khronokernel) for drivers<br>
 [headkaze](https://github.com/headkaze) for Hackintool<br>
-And everyone from the OpenCore community 🖤
+And everyone from the OpenCore community 💙
