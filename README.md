@@ -40,36 +40,36 @@ Begin by loading optimized default options, then make sure settings are as below
 
 **Version F14**
 
-| Menu                             | Name                            | Option       | Comment                                    |
-| -------------------------------- | ------------------------------- | ------------ | ------------------------------------------ |
-| **Save & Exit**                  | Load Optimized Defaults         | Yes          | _Begin with default settings_              |
-| **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | _Personal preference_                      |
-| **BIOS**                         | Boot Option #1                  | OpenCore     | _Disable all other boot options if needed_ |
-|                                  | Fast Boot                       | Disabled     | _**Recommended \***_                       |
-|                                  | Windows 8/10 Features           | Windows 8/10 | _**Recommended \***_                       |
-|                                  | CSM Support                     | Disabled     | _**Recommended \***_                       |
-| `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_                       |
-| **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_                    |
-|                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_                       |
-|                                  | Re-Size BAR Support             | Disabled     |                                            |
-|                                  | RGB Fusion                      | Off          | _Personal preference_                      |
-|                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_                       |
-|                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_                       |
-| `Trusted Computing`              | Security Device Support         | Disabled     | _**Recommended \***_                       |
-| `USB Configuration`              | Legacy USB Support              | Enabled      |                                            |
-| `USB Configuration`              | XHCI Hand-off                   | Enabled      | _**Recommended \***_                       |
-| `USB Configuration`              | USB Mass Storage Driver Support | Enabled      |                                            |
-| `USB Configuration`              | Port 60/64 Emulation            | Disabled     |                                            |
-| `Network Stack Configuration`    | Network Stack                   | Disabled     |                                            |
-| `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | _**Recommended \***_                       |
-| **Chipset**                      | VT-d                            | Disabled     | _**Recommended \***_                       |
-|                                  | Internal Graphics               | Enabled      | _For computing tasks only_                 |
-|                                  | DVMT Pre-Allocated **           | 64M          | _**Recommended \***_                       |
-|                                  | DVMT Total Gfx Mem **           | 256M         |                                            |
-|                                  | IOAPIC 24-119 Entries           | Enabled      |                                            |
-| **Power**                        | ErP                             | Enabled      | _Personal preference_                      |
-|                                  | RC6(Render Standby)             | Disabled     | _Personal preference_                      |
-| **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_                      |
+| Menu                             | Name                            | Option       | Comment                                |
+| -------------------------------- | ------------------------------- | ------------ | -------------------------------------- |
+| **Save & Exit**                  | Load Optimized Defaults         | Yes          | _Begin with default settings_          |
+| **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | _Personal preference_                  |
+| **BIOS**                         | Boot Option #1                  | OpenCore     | _Disable other boot options if needed_ |
+|                                  | Fast Boot                       | Disabled     | _**Recommended \***_                   |
+|                                  | Windows 8/10 Features           | Windows 8/10 | _**Recommended \***_                   |
+|                                  | CSM Support                     | Disabled     | _**Recommended \***_                   |
+| `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_                   |
+| **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_                |
+|                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_                   |
+|                                  | Re-Size BAR Support             | Disabled     |                                        |
+|                                  | RGB Fusion                      | Off          | _Personal preference_                  |
+|                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_                   |
+|                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_                   |
+| `Trusted Computing`              | Security Device Support         | Disabled     | _**Recommended \***_                   |
+| `USB Configuration`              | Legacy USB Support              | Enabled      |                                        |
+| `USB Configuration`              | XHCI Hand-off                   | Enabled      | _**Recommended \***_                   |
+| `USB Configuration`              | USB Mass Storage Driver Support | Enabled      |                                        |
+| `USB Configuration`              | Port 60/64 Emulation            | Disabled     |                                        |
+| `Network Stack Configuration`    | Network Stack                   | Disabled     |                                        |
+| `SATA And RST Configuration`     | SATA Mode Selection             | AHCI         | _**Recommended \***_                   |
+| **Chipset**                      | VT-d                            | Disabled     | _**Recommended \***_                   |
+|                                  | Internal Graphics               | Enabled      | _For computing tasks only_             |
+|                                  | DVMT Pre-Allocated **           | 64M          | _**Recommended \***_                   |
+|                                  | DVMT Total Gfx Mem **           | 256M         |                                        |
+|                                  | IOAPIC 24-119 Entries           | Enabled      |                                        |
+| **Power**                        | ErP                             | Enabled      | _Personal preference_                  |
+|                                  | RC6(Render Standby)             | Disabled     | _Personal preference_                  |
+| **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_                  |
 
 <sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup><br>
 <sup>_** You need to set Internal Graphics > Enabled, then Save & Exit Setup before these options are available. Enter BIOS setup again and confirm settings._</sup>
