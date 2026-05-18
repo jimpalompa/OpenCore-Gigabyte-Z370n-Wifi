@@ -1,5 +1,4 @@
 # OpenCore Gigabyte Z370n Wifi + RX 6600
-
 An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake processor. See compatible macOS version in release. This is my fourth OpenCore build so far. Used as my primary workstation.
 
 Though this is a "ready to use" EFI, it is for my own system, so **use at your own risk**. I recommend everyone to read [Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/). It's comprehensive, but take your time and have patience, there are no shortcuts to a perfect build.
@@ -17,7 +16,7 @@ I'm publishing releases here to reference my own configurations and to share my 
 Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) if you're planning on buying components for a new build.
 
 | Item        | Brand          | Model                                                                                           | Driver                                                                                                                                                 | Comment                         |
-|-------------|----------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| ----------- | -------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
 | Motherboard | Gigabyte       | Z370n Wifi                                                                                      | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
 | CPU         | Intel          | Core i7 8700K 3,7GHz                                                                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
 | RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                                                   | native                                                                                                                                                 |                                 |
@@ -42,7 +41,7 @@ Begin by loading optimized default options, then make sure settings are as below
 **Version F14**
 
 | Menu                             | Name                            | Option       | Comment                                    |
-|----------------------------------|---------------------------------|--------------|--------------------------------------------|
+| -------------------------------- | ------------------------------- | ------------ | ------------------------------------------ |
 | **Save & Exit**                  | Load Optimized Defaults         | Yes          | _Begin with default settings_              |
 | **M.I.T.** <br>`Advanced Memory` | Extreme Memory Profile          | Profile1     | _Personal preference_                      |
 | **BIOS**                         | Boot Option #1                  | OpenCore     | _Disable all other boot options if needed_ |
@@ -81,7 +80,7 @@ For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that
 ![USB port map](opencore_gigabyte_z370n_wifi_usb_ports.jpg)
 
 | Port | Type                      | Name                                    | Enabled                                                                                                                                                                                                                                     | Comment              |
-|:----:|---------------------------|-----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
+|:----:| ------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | A    | USB 3.1 <sup>Type-A</sup> | HS07 + SS07                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                               |                      |
 | B    | USB 3.1 <sup>Type-A</sup> | HS08 + SS08                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                               |                      |
 | C    | USB 3.1 <sup>Type-A</sup> | HS05 + SS05                             | ![Yes](https://dummyimage.com/11/0000fd/0000fd) + ![Yes](https://dummyimage.com/11/0000fd/0000fd)                                                                                                                               |                      |
