@@ -51,7 +51,7 @@ Begin by loading optimized default options, then make sure settings are as below
 | `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_                   |
 | **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_                |
 |                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_                   |
-|                                  | Re-Size BAR Support             | Disabled     |                                        |
+|                                  | Re-Size BAR Support             | Auto         | _Needs ResizeAppleGpuBars = 0 in EFI_  |
 |                                  | RGB Fusion                      | Off          | _Personal preference_                  |
 |                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_                   |
 |                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_                   |
