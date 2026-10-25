@@ -3,37 +3,40 @@ An OpenCore EFI for Gigabyte Z370n Wifi mini-ITX motherboard, with Coffee Lake p
 
 Though this is a "ready to use" EFI, it is for my own system, so **use at your own risk**. I recommend everyone to read [Dortania's OpenCore install guide](https://dortania.github.io/OpenCore-Install-Guide/). It's comprehensive, but take your time and have patience, there are no shortcuts to a perfect build.
 
-I'm publishing releases here to reference my own configurations and to share my EFI with others, for a little help on the way. With that said, I will probably not publish a release every time I update my OpenCore build. **Do not forget** to [generate SMBIOS info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) if you are planning on using this EFI in your build, since my releases does not include this information, for obvious reasons.
+I'm publishing releases here to reference my own configurations and to share my EFI with others, for a little help on the way. With that said, I will probably not publish a release every time I update my OpenCore build. **Do not forget** to [generate SMBIOS info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) if you are planning on using this EFI in your build, since my releases do not include this information, for obvious reasons.
 
 ![About this Mac](opencore_gigabyte_z370n_wifi_about_this_mac.jpg)
 
 ## Overview
+- This build runs macOS Sequoia natively, without OpenCore Legacy Patcher, using SMBIOS `iMac19,1`. macOS Tahoe removed AppleHDA, which the onboard Realtek audio needs through AppleALC, so Sequoia is the last macOS version where onboard audio works without root patching. That's why this build stays on Sequoia.
 - This build runs on a dedicated GPU, alongside the integrated GPU, which is only used for computing tasks and does not drive a display. If you are not using a dGPU you need to follow the [GPU patching](https://dortania.github.io/OpenCore-Post-Install/gpu-patching/) guide.
-- No beauty treatments were done in this build, that means no OpenCore GUI and no boot-chime. I want to keep everything minimal. You can enable all of this by following the [beauty treatment](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html) guide.
-- Wireless card for bluetooth and wifi is not replaced. I'm using the default motherboard Intel card. If you wish to swap the wireless card, remember to read [wireless buyers guide](https://dortania.github.io/Wireless-Buyers-Guide/) first.
+- No beauty treatments were done in this build, that means no OpenCore GUI and no boot-chime. I want to keep everything as lean and minimal as possible. You can enable all of this by following the [beauty treatment](https://dortania.github.io/OpenCore-Post-Install/cosmetic/gui.html) guide.
+- Wireless card for bluetooth and wifi is not replaced. I'm using the default motherboard Intel card (wifi currently disabled, see [known issues](#known-issues)). If you wish to swap the wireless card, remember to read [wireless buyers guide](https://dortania.github.io/Wireless-Buyers-Guide/) first.
 
 ## Hardware
 Remember to read the [anti-hackintosh buyers guide](https://dortania.github.io/Anti-Hackintosh-Buyers-Guide/) if you're planning on buying components for a new build.
 
 | Item        | Brand          | Model                                                                                                | Driver                                                                                                                                                 | Comment                         |
 | ----------- | -------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
-| Motherboard | Gigabyte       | Z370n Wifi                                                                                           | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              |                                 |
+| Motherboard | Gigabyte       | Z370n Wifi                                                                                           | [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) <br>[Lilu](https://github.com/acidanthera/Lilu)                                              | _BIOS version F14_              |
 | CPU         | Intel          | Core i7 8700K 3,7GHz                                                                                 | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)                                                                                                | _Coffee Lake_                   |
 | RAM         | Corsair        | Vengeance LPX DDR4 2133MHz 16GB <sup>x2</sup>                                                        | native                                                                                                                                                 |                                 |
 | iGPU        | Intel          | UHD Graphics 630                                                                                     | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          | _Headless mode_                 |
 | dGPU        | Asus           | RX 6600 DUAL V2 8GB                                                                                  | [WhateverGreen](https://github.com/acidanthera/WhateverGreen)                                                                                          |                                 |
 | SSD         | Samsung        | 970 EVO 500GB NVMe M.2 <sup>x2</sup> <br>850 EVO 250GB <sup>x1</sup> <br>840 EVO 250GB <sup>x1</sup> | [NVMeFix](https://github.com/acidanthera/NVMeFix) <br> <br> <br>                                                                                       | _macOS <br>Windows <br>Linux *_ |
 | HDD         | WD             | Green 3TB 3.5" <sup>x1</sup> <br>Green 2TB 3.5" <sup>x1</sup>                                        | native                                                                                                                                                 |                                 |
-| Wifi        | Intel          | AC 8265NGW <sup>802.11ac</sup>                                                                       | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             |                                 |
+| Wifi        | Intel          | AC 8265NGW <sup>802.11ac</sup>                                                                       | [AirportItlwm](https://github.com/OpenIntelWireless/itlwm)                                                                                             | _Disabled **_                   |
 | Bluetooth   | Intel          | AC 8265NGW <sup>v4.2</sup>                                                                           | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) <br>[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) |                                 |
-| Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~                                    | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V_             |
+| Ethernet    | Intel          | I219-V <sup>bottom port</sup> ~~<br>I211-AT <sup>top port</sup>~~                                    | [IntelMausi](https://github.com/acidanthera/IntelMausi)                                                                                                | _Only using I219-V ***_         |
 | Audio       | Realtek        | ALC1220                                                                                              | [AppleALC](https://github.com/acidanthera/AppleALC)                                                                                                    | _Layout-ID 5_                   |
 | PSU         | Corsair        | RM750X V2 750W                                                                                       |                                                                                                                                                        |                                 |
 | Case        | Fractal Design | Pop Mini Silent                                                                                      |                                                                                                                                                        |                                 |
 | CPU cooler  | Cryorig        | H7                                                                                                   |                                                                                                                                                        |                                 |
-| Display     | Dell           | U2723QE 27" <br>P2722DE 27" <br>P2422H 24"                                                           |                                                                                                                                                        |                                 |
+| Display     | Dell           | U2723QE 27" <br>U2722DE 27" <br>P2422H 24"                                                           |                                                                                                                                                        |                                 |
 
-<sup>_* Extra drivers needed when dualbooting with Linux, [Dualbooting with Linux](https://dortania.github.io/OpenCore-Multiboot/oc/linux.html#method-a-openlinuxboot) using method A._</sup>
+<sup>_* Extra drivers needed when dualbooting with Linux, [Dualbooting with Linux](https://dortania.github.io/OpenCore-Multiboot/oc/linux.html#method-a-openlinuxboot) using method A._</sup><br>
+<sup>_** Wifi stopped working after Sequoia update, see [known issues](#known-issues)._</sup><br>
+<sup>_*** Top ethernet port stopped working after Monterey update, see [known issues](#known-issues)._</sup>
 
 ## BIOS setup
 Begin by loading optimized default options, then make sure settings are as below.
@@ -51,7 +54,7 @@ Begin by loading optimized default options, then make sure settings are as below
 | `Secure Boot`                    | Secure Boot                     | Disabled     | _**Recommended \***_                   |
 | **Peripherals**                  | Initial Display Output          | PCIe 1 Slot  | _This build has a dGPU_                |
 |                                  | Above 4G Decoding               | Enabled      | _**Recommended \***_                   |
-|                                  | Re-Size BAR Support             | Disabled     |                                        |
+|                                  | Re-Size BAR Support             | Disabled     | _macOS gets nothing from it ***_       |
 |                                  | RGB Fusion                      | Off          | _Personal preference_                  |
 |                                  | Intel Platform Trust Technology | Disabled     | _**Recommended \***_                   |
 |                                  | SW Guard Extens. (SGX)          | Disabled     | _**Recommended \***_                   |
@@ -69,10 +72,44 @@ Begin by loading optimized default options, then make sure settings are as below
 |                                  | IOAPIC 24-119 Entries           | Enabled      |                                        |
 | **Power**                        | ErP                             | Enabled      | _Personal preference_                  |
 |                                  | RC6(Render Standby)             | Disabled     | _Personal preference_                  |
+| **Hidden**                       | CFG Lock                        | Disabled     | _Hidden in BIOS ****_                  |
 | **Save & Exit**                  | Save & Exit Setup               | Yes          | _Save BIOS and reset_                  |
 
 <sup>_* As recommended in OpenCore install guide, [Coffee Lake: Intel BIOS settings](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings)._</sup><br>
-<sup>_** You need to set Internal Graphics > Enabled, then Save & Exit Setup before these options are available. Enter BIOS setup again and confirm settings._</sup>
+<sup>_** You need to set Internal Graphics > Enabled, then Save & Exit Setup before these options are available. Enter BIOS setup again and confirm settings._</sup><br>
+<sup>_*** If you enable Re-Size BAR anyway, macOS will not boot unless you set Booter > Quirks > ResizeAppleGpuBars to `0`._</sup><br>
+<sup>_**** Not in the BIOS menu on F14. It must be unlocked once with a shell command, since this EFI has the AppleXcpmCfgLock quirk turned off. See [CFG Lock](#cfg-lock)._</sup>
+
+## CFG Lock
+
+BIOS F14 has no CFG Lock option, so it's unlocked through the hidden BIOS variable instead ([Dortania: Fixing CFG Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html), option 2). With CFG Lock unlocked, `AppleXcpmCfgLock` is **off** in this EFI.
+
+[setup_var.efi](https://github.com/datasone/setup_var.efi/releases) is included in `EFI/OC/Tools`. Its Misc > Tools entry in config.plist is disabled on purpose, since it's started from OpenShell instead.
+
+> ⚠️ Do this before using this EFI. With CFG Lock still locked and the quirk off, macOS panics early in boot.
+
+1. In the OpenCore picker, press Space to show tools and choose OpenShell.efi. A text prompt appears (`Shell>`).
+2. Find the partition with OpenCore. Type `ls fs0:\EFI\OC\Tools`, then `ls fs1:\EFI\OC\Tools` and so on, until `setup_var.efi` is listed. Then switch to it and go to the tools folder, for example `fs10:` and then `cd EFI\OC\Tools`.
+3. Read the current value: `setup_var.efi Setup:0x5A4`. It should say `0x01` (locked). If it already says `0x00`, it's unlocked and you can skip step 4.
+4. Unlock: `setup_var.efi Setup:0x5A4=0x00`
+5. Shut down completely: `reset -s`
+6. Boot into macOS and check that `sysctl -n machdep.xcpm.mode` in Terminal returns `1`
+
+The offset `0x5A4` is only valid for BIOS **F14**. A CMOS clear or "Load Optimized Defaults" locks it again, so repeat steps 1–5. An OpenCore Reset NVRAM does not lock it again.
+
+<details>
+  <summary><small>Note to self: Keyboard layout in OpenShell</small></summary>
+  <br>
+  <small>
+  OpenShell uses a US keyboard layout. On a Swedish keyboard:
+
+  `:` > Shift + the `Ö` key<br>
+  `\` > the `*` key (left of Enter)<br>
+  `_` > Shift + the `?` key<br>
+  `=` > the `´` key (left of Backspace)<br>
+  `-` > the `+` key
+  </small>
+</details>
 
 ## USB ports
 For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that you can have a total of 15 ports per USB controller, this board has only one controller. USB 3.1 counts as two ports for backward compatibility. USB-C port on this motherboard is a non-switch variant, it counts as three ports. See image and table below which ports are available and which I chose to map in USBPorts.kext. Use [USBMap](https://github.com/corpnewt/USBMap) or [Hackintool](https://github.com/headkaze/Hackintool) if you wish to create your own USB map.
@@ -96,7 +133,7 @@ For USB mapping I enabled **seven** physical ports, and bluetooth. Remember that
 <sup>_** I have no PCI bracket for the USB 2.0 Header, so I could not recognize the names for those ports._</sup>
 
 ## Audio layout
-For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3 works as well, with the same exact functionality*. All other compatible layouts for this audio chipset were tested and did not work fully.
+For audio layout I used **layout-ID 5**, it seemed most appropriate. Layout-ID 3 works as well, with the same exact functionality*. All other compatible layouts for this audio chipset were tested and did not work fully.
 
 ![Blue audio jack](https://dummyimage.com/11/0000fd/0000fd) Blue audio jack acts as `Line In`<br>
 ![Green audio jack](https://dummyimage.com/11/00ad00/00ad00) Green audio jack acts as `Internal Speakers`<br>
@@ -109,32 +146,36 @@ For audio layout i used **layout-ID 5**, it seemed most appropriate. Layout-ID 3
 <sup>_* The only difference between these layouts is that layout5.xml has the key MaximumBootBeepValue, value 64. It also has different PathMapID for SPDIFOut. To use S/PDIF with this motherboard however, you need to connect an expansion card, which I don't have, so I can't test it._</sup>
 
 ## What works?
-Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, HDMI audio, wake up from display sleep. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) does not work fully.
+Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card), dGPU + iGPU acceleration, multiple displays, HDMI audio. Bottom Ethernet port, all USB ports (only some are enabled) including USB-C, all Audio ports. Sleep and wake, ~~AirDrop/Handoff/Continuity~~, iMessage, FaceTime and other iServices. Only a [few minor things](#known-issues) do not work fully.
 
 ## Known issues
 - [ ] TRIM during boot takes a long while if it's activated.
 
-<sup>_Samsung SSD's are not macOS TRIM-supported. Fixed by setting key SetApfsTrimTimeout to 0. Build now boots instantaneously._</sup>
+<sup>_Samsung SSDs are not macOS TRIM-supported. Fixed by setting key SetApfsTrimTimeout to 0. Build now boots instantaneously._</sup>
 
 - [ ] Wifi stopped working after Sequoia update.
 
-<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards. The latest AirportItlwm (v2.3.0) only has builds up to Sonoma 14.4, so the kext is kept in the EFI but disabled in config.plist. Enable it again if a Sequoia build is released._</sup>
 
-- [ ] AirDrop/Handoff/Continuity does not work after Sonoma update.
+- [ ] AirDrop/Handoff/Continuity stopped working after Sonoma update.
 
-<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve the issue?_</sup>
 
 - [ ] Continuity Camera does not work wirelessly, only works with USB connection.
 
-<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve issue?_</sup>
+<sup>_macOS no longer natively supports any wireless cards. Perhaps future drivers will solve the issue?_</sup>
 
-- [ ] I211-AT top ethernet port is not working after Monterey update. It shows up in Network settings, but can't connect to anything.
+- [ ] macOS updates download the full installer instead of a small delta update.
+
+<sup>_BlueToolFixup patches `/usr/sbin/BlueTool` in memory, so the delta update fails its file check and macOS falls back to the full installer. To get the small update, disable BlueToolFixup.kext in config.plist during the update (use a USB keyboard), then enable it again._</sup>
+
+- [ ] I211-AT top ethernet port stopped working after Monterey update. It shows up in Network settings, but can't connect to anything.
 
 <sup>_I don't mind this, since I'm only using one ethernet port. There are some pre-releases of kexts to get the second port working, but I chose not to use them due to instability._</sup>
 
-- [x] System hangs with Windows Memory integrity enabled.
+- [ ] System hangs with Windows Memory integrity enabled.
 
-<sup>_Running dual OS system, macOS + Windows, enabling Device security > Memory integrity in Windows, system hangs during startup, at the BIOS logo. You will never get past the logo to the OpenCore boot picker. BE AWARE to not enabling this setting in Windows._</sup>
+<sup>_Running dual OS system, macOS + Windows, enabling Device security > Memory integrity in Windows, system hangs during startup, at the BIOS logo. You will never get past the logo to the OpenCore boot picker. Be aware not to enable this setting in Windows._</sup>
 
 ## Extras
 
@@ -143,7 +184,7 @@ Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card),
   <summary>Quick guide on how to debug OpenCore with my releases.</summary>
   <br>
 
-  My releases are prepared for easy dubugging, all you have to do is download the DEBUG version of [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg). Reminder, it's a good idea booting the debug EFI from a USB stick.
+  My releases are prepared for easy debugging, all you have to do is download the DEBUG version of [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg). Reminder, it's a good idea booting the debug EFI from a USB stick.
 
   **Swap the following files:**
 
@@ -169,7 +210,7 @@ Almost everything works. ~~Wifi~~ and bluetooth (using the internal Intel card),
 Visit my [Quick Reference Guide](https://github.com/jimpalompa/macOS-OpenCore-Quick-Reference-Guide) for more macOS and OpenCore commands, guides, fixes and features.
 
 ## Software
-A collection of apps that may come handy when configuring your build. Reminder, if you wish to use this EFI in your own build, you need to [generate SMBIOS info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) first. System will not boot without it. Use EFI at your own risk.
+A collection of apps that may come in handy when configuring your build. Reminder, if you wish to use this EFI in your own build, you need to [generate SMBIOS info](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) first. System will not boot without it. Use EFI at your own risk.
 
 [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) for generating SMBIOS<br>
 [MountEFI](https://github.com/corpnewt/MountEFI) for mounting EFI partitions<br>
